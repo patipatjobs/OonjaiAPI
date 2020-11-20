@@ -16,23 +16,6 @@ Route::get('/privacy', function ()
 $router->group(['prefix' => 'api'], function () use ($router) 
 {
 
-  $router->group(['prefix' => '/v3'], function () use ($router) 
-  {
-
-    $router->group(['prefix' => '/read'],  function () use ($router)
-    {
-
-      $router->get('',  ['uses' => 'ReadController@read']);
-      $router->get('/home',  ['uses' => 'ReadController@home']);
-      $router->get('/cars',  ['uses' => 'ReadController@cars']);
-      $router->get('/student',  ['uses' => 'ReadController@student']);
-      $router->get('/history',  ['uses' => 'ReadController@history']);
-      $router->get('/details',  ['uses' => 'ReadController@details']);
-
-    });
-    
-  });
-
   $router->group(['prefix' => 'v2'], function () use ($router) 
   { 
 
