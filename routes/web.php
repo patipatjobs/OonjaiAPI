@@ -13,10 +13,10 @@ Route::get('/privacy', function ()
 
 });
 
-$router->group(['prefix' => '/api'], function () use ($router) 
+$router->group(['prefix' => 'api'], function () use ($router) 
 { 
 
-  $router->group(['prefix' => '/v2'], function () use ($router) 
+  $router->group(['prefix' => 'v2'], function () use ($router) 
   { 
 
     $router->group(['prefix' => '/create'],  function () use ($router)
